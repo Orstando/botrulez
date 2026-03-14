@@ -5,7 +5,7 @@ with each other. The goal of a bot is to enhance the experience of the user
 and one of the ways to do so is to provide a unified interface across bots.
 These standards are all about improving the user experience of bots; if you
 believe that breaking some of them would improve the bot, you may go ahead —
-rules are meant to be broken (if you know what you're doing).
+rules are meant to be broken (if you know what you're doing). The only time you are NOT allowed to break, is the fact that you must ask for user consent before saving/caching messages.
 
 ***
 
