@@ -15,9 +15,9 @@ The user of the bot should be able to predict when the bot will appear. This
 helps avoid "spammy" bots. Therefore, bots should mostly be interacted with
 using commands. 
 
-A command is a statement beinning with a `!`, immediately followed by the
+A command is a statement beinning with a `/`, immediately followed by the
 command name, with arguments possibly following. Therefore, a command would
-match the regex `/^!(\S+)(\s+(\S+))*\s*$/`, where the first grouping contains
+match the regex `/^/(\S+)(\s+(\S+))*\s*$/`, where the first grouping contains
 the command name, and the third one the individual arguments.
 
 ***
@@ -26,8 +26,8 @@ the command name, and the third one the individual arguments.
 
 This section specifies some commands of use for a large majority of bots.
 
-### !ping
-When a `!ping` is sounded, the bot should reply with a `Pong!`. Other replies
+### /ping
+When a `/ping` is sounded, the bot should reply with a `Pong!`. Other replies
 are permitted, however, they should be concise and predictable.
 
 There are 2 types of ping — *general* and *specific*.
@@ -37,14 +37,14 @@ specific ping, only the bot that is specified in the command should reply.
 
 **General syntax:**
 
-    !ping
+    /ping
 
 **Specific syntax:**
 
-    !ping @BotName
+    /ping @BotName
 
-### !help
-When a help request is made using `!help`, the bot should resond with a help
+### /help
+When a help request is made using `/help`, the bot should resond with a help
 text detailing the purpose of the bot and how to use it.
 
 As with pings, there are two variations on the command.
@@ -56,14 +56,14 @@ will reply to and how to use them.
 
 **General syntax:**
 
-    !help
+    /help
 
 **Specific syntax:**
 
-    !help @BotName
+    /help @BotName
 
-### !uptime
-When an `!uptime` command is given, the bot specified should reply with the
+### /uptime
+When an `/uptime` command is given, the bot specified should reply with the
 amount of time it has been active and online without crashing and the time
 when the bot became active. While the two pieces of information are
 redundant, they are both equally useful for human users.
@@ -82,11 +82,11 @@ Differently to the other commands, a general reply is not mandated (why would
 one want to know all the bots' uptime?); apart from that, the syntax is
 similar:
 
-    !uptime
+    /uptime
 
 **Specific syntax:**
 
-    !uptime @BotName
+    /uptime @BotName
 
 ***
 
@@ -96,21 +96,21 @@ In some cases bots may be forced to respond to these commands by the platform,
 or the programmer may wish to implement them as a way to give the end-user
 further control over the bot.
 
-### !pause and !restore
-When the `!pause` command is issued to a bot, then the bot should cease all
-of its activity but continue to remain in the nick list. When the `!restore`
+### /pause and /restore
+When the `/pause` command is issued to a bot, then the bot should cease all
+of its activity but continue to remain in the nick list. When the `/restore`
 commmand is given to a paused bot, the bot should continue performing its
 duties again; the uptime should be restarted at this point.
 
 **Syntax:**
 
-    !pause @BotName
+    /pause @BotName
 
-    !restore @BotName
+    /restore @BotName
 
-### !kill
+### /kill
 Sometimes, a bot might go out of control and the user may find it neccessary
-to terminate it. When the `!kill` command is given the bot shall cease to
+to terminate it. When the `/kill` command is given the bot shall cease to
 exist immediately; it shall exit the room and not appear again even if called
 for.
 
@@ -120,26 +120,26 @@ to enable them to fix it.
 
 **Syntax:**
 
-    !kill @BotName
+    /kill @BotName
 
-### !restart
-If the `!restart` command is given to a bot, the bot should restart all of
+### /restart
+If the `/restart` command is given to a bot, the bot should restart all of
 its activities, and appear again. This may be helpful in a bot that is not
 bug free and requires occasional restarts to fix issues. After this command,
 the uptime should be restarted.
 
 **Syntax:**
 
-    !restart @BotName
+    /restart @BotName
 
-### !conjure
+### /conjure
 Some bots do perform an idiomatical action under certain conditions (like,
 a *@tumbleweed* bot would "roll by" if the room is silent for a long time);
-to let the bot perform the action unconditionally, the `!conjure` command
+to let the bot perform the action unconditionally, the `/conjure` command
 may be used.
 
 **Syntax:**
 
-    !conjure @BotName
+    /conjure @BotName
 
 ***
